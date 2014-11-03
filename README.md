@@ -15,6 +15,7 @@ Build a simple Facebook App with the following requirements:
 
 4. You are recommended to follow the structure of the base application and use the following tools & frameworks:
 	- SLIM framework
+	- Eloquent ORM
 	- Bower
 	- Composer
 	- Gulp
