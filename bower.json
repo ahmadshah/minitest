@@ -1,0 +1,21 @@
+{
+  "name": "Minitest",
+  "version": "0.0.1",
+  "homepage": "https://github.com/Kraken-MY/minitest",
+  "description": "Kraken Mini Test",
+  "authors": [
+    "Syamil MJ"
+  ],
+  "license": "Kraken Interactive Sdn Bhd",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.2.0"
+  }
+}
