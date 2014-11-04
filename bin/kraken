@@ -1,0 +1,35 @@
+#!/usr/bin/env php
+
+<?php
+require __DIR__.'/../vendor/autoload.php';
+
+use Illuminate\Config\FileLoader;
+use Illuminate\Config\Repository;
+use Illuminate\Events\Dispatcher;
+use Illuminate\Container\Container;
+use Illuminate\Filesystem\Filesystem;
+use Illuminate\Database\Capsule\Manager as Capsule;
+
+$environment = 'production';
+$configPath = __DIR__.'/../app/config';
+
+$loader = new FileLoader(new Filesystem, $configPath);
+$config = new Repository($loader, $environment);
+
+$capsule = new Capsule;
+$capsule->addConnection($config->get('database.mysql'));
+$capsule->setEventDispatcher(new Dispatcher(new Container));
+$capsule->setAsGlobal();
+$capsule->bootEloquent();
+
+if ( ! Capsule::schema()->hasTable('users')) {
+    Capsule::schema()->create('users', function ($table) {
+        $table->increments('id');
+        $table->string('uid');
+        $table->string('email', 100);
+        $table->string('first_name');
+        $table->string('last_name');
+        $table->string('profile_image');
+        $table->timestamps();
+    });
+};
