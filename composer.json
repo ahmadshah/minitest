@@ -1,12 +1,13 @@
 {
     "require": {
         "slim/slim": "2.*",
-        "illuminate/database": "*"
+        "illuminate/config": "4.2.*",
+        "illuminate/database": "4.2.*",
+        "facebook/php-sdk-v4" : "4.0.*"
     },
     "autoload": {
-    	"classmap": [
-    		"models/"
-    		"controllers"
-    	]
+    	"psr-4": {
+            "Kraken\\": "app/src" 
+        }
     }
 }
