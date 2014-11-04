@@ -1,3 +1,8 @@
 # Composer
 /vendor/*
-composer.lock
+
+# Bower
+/src/vendor/*
+
+# Nodejs
+/node_modules/*

@@ -3,11 +3,12 @@
         "slim/slim": "2.*",
         "illuminate/config": "4.2.*",
         "illuminate/database": "4.2.*",
-        "facebook/php-sdk-v4" : "4.0.*"
+        "league/oauth2-client": "~0.3"
     },
     "autoload": {
     	"psr-4": {
             "Kraken\\": "app/src" 
         }
-    }
+    },
+    "prefer-stable": true
 }
