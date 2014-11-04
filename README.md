@@ -2,6 +2,12 @@
 
 Build a simple Facebook App with the following requirements:
 
+### Installation
+* Clone the repository
+* Change the database credential in ```app/config/database.php```
+* Change the Facebook app credential in ```app/config/service.php```
+* ```chmod +x bin/kraken``` and run ```./bin/kraken``` to create the necessary tables
+
 1. **Facebook Authentication** - Use either PHP/JS SDK
 
 2. **Users** - Build a user database and include these data:
